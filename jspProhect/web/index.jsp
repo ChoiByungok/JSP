@@ -13,9 +13,11 @@
 <body>
 <h1>서블릿 JSP 연습예제</h1>
 <div>
-    <ul class="main__nav__next">
-        <li>👉🏻<a href="howMuchHello.jsp"><b>이동</b></a></li>
-    </ul>
+
+    <li>👉🏻<a href="hello.jsp"><b>Hello 예제</b></a></li>
+    <li>👉🏻<a href="selfIntroductions.jsp"><b>자기소개 예제</b></a></li>
+    <li>👉🏻<a href="calculator.jsp"><b>계산예제</b></a></li>
+
 
 </div>
 </body>

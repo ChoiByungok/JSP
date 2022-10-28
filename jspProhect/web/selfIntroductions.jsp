@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>헬로</title>
+    <title>자기소개</title>
 </head>
 <body>
 <h1>JSP Servlet 연습</h1>
@@ -27,5 +27,12 @@
         <input type="submit" name="submit" value="등록"/>
     </div>
 </form>
+
+    <form action="index.jsp" method="post">
+        <div>
+            <input type="submit" value="처음으로">
+        </div>
+    </form>
+
 </body>
 </html>
