@@ -15,11 +15,12 @@ public class Application extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ServletContext application = request.getServletContext();
+//        ServletContext application = request.getServletContext();
+        HttpSession session = request.getSession();
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-
+        long time = session.getCreationTime();
         String v_ = request.getParameter("v");
         String op = request.getParameter("operator");
         int v = 0;
@@ -28,19 +29,20 @@ public class Application extends HttpServlet {
         }
         if(op.equals("=")){
 
-            int x = (Integer)application.getAttribute("value");
+            int x = (Integer)session.getAttribute("value");
             int y = v;
             int result = 0;
-            String operator = (String)application.getAttribute("op");
+            String operator = (String)session.getAttribute("op");
             if(operator.equals("+")){
                 result = x+y;
             }else{
                 result = x-y;
             }
             out.println("결과는: " + result + " 입니다.");
+            out.println(time);
         }else {
-            application.setAttribute("value",v);
-            application.setAttribute("op",op);
+            session.setAttribute("value",v);
+            session.setAttribute("op",op);
             response.sendRedirect("/application.jsp");
         }
 
