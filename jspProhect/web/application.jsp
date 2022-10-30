@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>application 저장소</title>
+    <title>application/session/cookie 저장소</title>
 </head>
 <body>
 <h1>JSP Servlet 연습</h1>
